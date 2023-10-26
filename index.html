@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tu Sitio Web</title>
+    <!-- Agrega enlaces a las librerías de Bootstrap y CSS personalizado aquí -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+    <link rel="stylesheet" href="ruta-a-tu-archivo-de-estilos.css">
+    <style>
+        /* Estilo par nav */
+        .navbar a {
+            color: #02b7ff !important;
+            margin: 0 0.5rem;
+        }
+
+        .navbar a:hover {
+            color: #00668f !important;
+        }
+        /* agregar subrayado a la seccion activa */
+        .navbar .active {
+            border-bottom: 2px solid #02b7ff;
+        }
+        .navbar img {
+            max-width: 100%;
+            height: 4rem;
+        }
+        /* Estilo para el buscador */
+        .search-box {
+            margin-left: 1rem;
+            padding: 0 1rem;
+            display: flex;
+            align-items: center;
+            background: #02b7ff;
+            color: #fff;
+            border-radius: 0.5rem;
+        }
+        .search-box i {
+            font-size: 1.5rem;
+        }
+        .search-box input {
+            border: none;
+            background: none;
+            outline: none;
+            padding: 0.5rem;
+            color: #fff;
+        }
+        .search-box input::placeholder {
+            color: #fff;
+        }
+        .search-box input:focus {
+            box-shadow: none;
+            background: none;
+        }
+
+        /* Estilo para el carrusel */
+        #carouselExample .carousel-item {
+            height: 32rem;
+        }
+        /* Estilos para la seccion Emprendimiento */
+        #inicio .container {
+            margin-top: 2rem;
+            padding: 2rem;
+            background-color: rgba(46, 224, 255, 0.158);
+            border-radius: 1rem;
+        }
+        #inicio .section-text {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        #inicio .section-text h1 {
+            font-size: 3rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+        }
+        #inicio .section-text p {
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+        }
+        #inicio .section-text a {
+            margin-top: 1rem;
+            margin: 1rem;
+            background: #02b7ff !important;
+            border: none;
+            outline: none;
+            padding: 0.5rem 1rem;
+            border-radius: 0.5rem;
+            color: #fff;
+            font-size: 1rem;
+            font-weight: bold;
+            text-decoration: none;
+        }
+        /* Estilos para la seccion Nosotros */
+        #nosotros .container {
+            margin-top: 2rem;
+            padding: 2rem;
+            background-color: rgba(46, 224, 255, 0.158);
+            border-radius: 1rem;
+        }
+        #nosotros .section-text {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        #nosotros .section-text h1 {
+            font-size: 3rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+        }
+        #nosotros .section-text p {
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+        }
+        #nosotros .section-text a {
+            margin-top: 1rem;
+            margin: 1rem;
+            background: #02b7ff !important;
+            border: none;
+            outline: none;
+            padding: 0.5rem 1rem;
+            border-radius: 0.5rem;
+            color: #fff;
+            font-size: 1rem;
+            font-weight: bold;
+            text-decoration: none;
+        }
+        
+        /* Estilos para el footer */
+        footer {
+            margin-top: 2rem;
+            background-color: #000;
+            color: #fff;
+            padding: 2rem 0;
+        }
+        footer .logo {
+            max-width: 100%;
+            height: 4rem;
+        }
+        footer .fa {
+            margin-right: 0.5rem;
+        }
+        footer hr {
+            border-top: 1px solid #fff;
+        }
+        footer p {
+            font-size: 1rem;
+        }
+        footer a {
+            color: #fff;
+        }
+        footer a:hover {
+            color: #02b7ff;
+        }   
+    </style>
+</head>
+
+<body>
+    <!-- Header -->
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container">
+                <a class="navbar-brand" href="#">
+                    <img src="img/logooo.png"
+                        alt="Logo" class="logo">
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="#inicio">Inicio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#nosotros">Nosotros</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#productos">Productos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#iniciar-sesion">Iniciar Sesión</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="search-box">
+                    <i class="fas fa-search"></i>
+                    <input type="text" class="form-control border-0" placeholder="Buscar">
+                </div>                          
+            </div>
+        </nav>
+    </header>
+    <!-- Carrusel -->
+    <section id="carrusel">
+        <div id="carouselExample" class="carousel slide" data-ride="carousel">
+            <ol class="carousel-indicators">
+                <li data-target="#carouselExample" data-slide-to="0" class="active"></li>
+                <li data-target="#carouselExample" data-slide-to="1"></li>
+                <li data-target="#carouselExample" data-slide-to="2"></li>
+            </ol>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="https://images.pexels.com/photos/919734/pexels-photo-919734.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                        class="d-block w-100" alt="Slide 1">
+                </div>
+                <div class="carousel-item">
+                    <img src="https://images.pexels.com/photos/417458/pexels-photo-417458.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                        class="d-block w-100" alt="Slide 2">
+                </div>
+                <div class="carousel-item">
+                    <img src="https://images.pexels.com/photos/256381/pexels-photo-256381.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                        class="d-block w-100" alt="Slide 3">
+                </div>
+            </div>
+            <a class="carousel-control-prev" href="#carouselExample" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Anterior</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExample" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Siguiente</span>
+            </a>
+        </div>
+    </section>
+
+    <!-- Seccion Emprendimiento -->
+    <section id="inicio">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 section-text">
+                    <h1>Emprendimiento</h1>
+                    <p>En Tec & Trade, hemos estado innovando desde nuestro inicio en enero de 2023. 
+                        Nuestra misión es impulsar el comercio tecnológico y facilitar el acceso a productos de alta calidad. 
+                        Únete a nosotros y sé parte de nuestra visión. ¡Conócenos y sé parte de la revolución tecnológica!</p>
+                    <a href="#" class="btn btn-primary">Conocer más</a>
+                </div>
+                <div class="col-md-6">
+                    <img src="https://images.pexels.com/photos/3184355/pexels-photo-3184355.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                        alt="Imagen de inicio" class="img-fluid">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seccion Nosotros -->
+    <section id="nosotros">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <img src="https://images.pexels.com/photos/3184355/pexels-photo-3184355.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                        alt="Imagen de inicio" class="img-fluid">
+                </div>
+                <div class="col-md-6 section-text">
+                    <h1>Nosotros</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum. Quisquam, voluptatum.</p>
+                    <a href="#" class="btn btn-primary">Conocer más</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <img src="img/logooo.png" alt="Logo" class="logo">
+                    <p>Renueva tu estilo, Compra Ahora!</p>
+                </div>
+                <div class="col-md-4">
+                    <h4>Ubicación</h4>
+                    <p><i class="fas fa-map-marker-alt"></i> Av. Cascanueces, Santa Anita</p>
+                    <p><i class="fas fa-phone-alt"></i> +51 961201284</p>
+                    <p><i class="fas fa-envelope"></i> tec&trade@gmail.com</p>
+                </div>
+                <div class="col-md-4">
+                    <h4>Conocer más</h4>
+                    <p><i class="fas fa-greater-than"></i> Inicio</p>
+                    <p><i class="fas fa-greater-than"></i> Nosotros</p>
+                    <p><i class="fas fa-greater-than"></i> Productos</p>
+                </div>
+            </div>
+            <hr>
+            <p class="text-center">Todos los derechos reservados &copy; 2023</p>
+        </div>
+    </footer>
+</body>
+
+</html>
